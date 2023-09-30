@@ -1,0 +1,98 @@
+.Work {
+  padding: 0 3rem 0;
+  display: flex;
+  height: 90vh;
+  margin-top: 4rem;
+  align-items: center; /* Center the content vertically */
+}
+
+.w-right {
+  flex: 1; /* Make it take the remaining space in the flex container */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+.w-maincircle {
+  position: relative;
+  height: 18rem;
+  width: 18rem;
+  box-shadow: var(--smboxShadow);
+  border-radius: 100%;
+  background: white;
+}
+
+/* .w-right {
+  position: relative;
+  /* transform: rotate(45deg); */
+/* transform-origin: center; */
+/* transform: translateX(-50%); */
+/* } */
+
+/* .w-maincircle {
+  position: relative;
+  left: 9rem;
+  height: 18rem;
+  width: 18rem;
+  box-shadow: var(--smboxShadow);
+  border-radius: 100%;
+  /* top: 2rem; */
+/* background: white; */
+/* } */
+.w-maincircle > * {
+  position: absolute;
+}
+.w-maincircle > :nth-child(1) {
+  top: -3rem;
+  left: 6rem;
+}
+.w-maincircle > :nth-child(2) {
+  top: 6rem;
+  left: -3rem;
+}
+.w-maincircle > :nth-child(3) {
+  top: 6rem;
+  left: 6rem;
+}
+.w-maincircle > :nth-child(4) {
+  top: 15rem;
+  left: 6rem;
+}
+.w-maincircle > :nth-child(5) {
+  top: 6rem;
+  left: 15rem;
+}
+.w-seccircle {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  border-radius: 100%;
+  border: 5px solid #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  box-shadow: var(--smboxShadow);
+  background: white;
+}
+.w-seccircle > img {
+  transform: scale(0.6);
+}
+.w-backcircle {
+  position: absolute;
+  height: 13rem;
+  width: 13rem;
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.bluecircle {
+  background-color: blue;
+  top: 0rem;
+  left: 15rem;
+}
+.yellowcircle {
+  background-color: #f5c32c;
+  left: 15rem;
+  top: 8rem;
+}

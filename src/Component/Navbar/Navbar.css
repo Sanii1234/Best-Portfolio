@@ -1,0 +1,72 @@
+.n-wrapper {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.n-left {
+  flex: 0.5;
+  display: flex;
+  gap: 2rem;
+}
+.name {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.n-right {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  font-weight: 400;
+}
+.n-list {
+  flex: 1;
+}
+.n-list > ul {
+  display: flex;
+  gap: 4rem;
+  margin-right: 4rem;
+}
+.n-list > ul :hover {
+  cursor: pointer;
+  color: var(--orange);
+}
+.n-list > ul > li {
+  list-style: none;
+  display: flex;
+  gap: 6rem;
+}
+/* Add this code to your Navbar.css file */
+@media screen and (max-width: 1020px) {
+  .n-wrapper {
+    flex-direction: column; /* Stack items vertically */
+    height: auto; /* Remove fixed height */
+  }
+
+  .n-left {
+    flex: 1; /* Take full width */
+    margin-bottom: 1rem; /* Add some spacing between elements */
+  }
+
+  .n-right {
+    flex: 1; /* Take full width */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .n-list > ul {
+    flex-direction: column; /* Stack list items vertically */
+    gap: 1rem; /* Add spacing between list items */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .n-list > ul > li {
+    display: block; /* Make list items block-level for stacking */
+    text-align: center; /* Center-align text */
+  }
+}
+@media screen and (max-width: 480px) {
+  .n-list {
+    display: none;
+  }
+}

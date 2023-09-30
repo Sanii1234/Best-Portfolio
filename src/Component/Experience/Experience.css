@@ -1,0 +1,63 @@
+.experince {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 6rem;
+  height: 20vh;
+  margin-bottom: 8rem;
+}
+
+.acheivement {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.circle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: white;
+  position: relative;
+  /* text-align: center; Remove this line */
+  /* padd-left: 10px; Remove this line */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.circle::before {
+  border-radius: 100%;
+  content: " ";
+  background-image: linear-gradient(to bottom, #87e6fb 0%, #ffc05c 100%);
+  position: absolute;
+  top: -8px;
+  bottom: -8px;
+  left: -8px;
+  right: -8px;
+  z-index: -1;
+  box-shadow: var(--boxShadow);
+}
+
+.acheivement span:nth-of-type(2) {
+  color: var(--orange);
+}
+
+/* Add styles for dark mode */
+.dark-mode .circle {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode .circle::before {
+  background-image: linear-gradient(to bottom, #fff 0%, #000 100%);
+}
+
+.dark-mode .acheivement span:nth-of-type(2) {
+  color: white;
+}
